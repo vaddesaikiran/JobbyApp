@@ -112,10 +112,10 @@ class JobItemDetails extends Component {
         <p className="job-item-failure-description">
           We cannot seem to find the page you are looking for
         </p>
-        {/* eslint-disable-next-line */}
+
         <button
           type="button"
-          id="button"
+          data-testid="button"
           className="job-item-failure-button"
           onClick={this.getJobData}
         >
@@ -126,7 +126,7 @@ class JobItemDetails extends Component {
   }
 
   renderLoadingView = () => (
-    <div className="job-item-loader-container" id="loader">
+    <div className="job-item-loader-container" data-testid="loader">
       <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
     </div>
   )

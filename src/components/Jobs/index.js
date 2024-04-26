@@ -152,7 +152,7 @@ class Jobs extends Component {
       </p>
       <button
         type="button"
-        id="button"
+        data-testid="button"
         className="jobs-failure-button"
         onClick={this.getJobs}
       >
@@ -162,7 +162,7 @@ class Jobs extends Component {
   )
 
   renderLoadingView = () => (
-    <div className="loader-container" id="loader">
+    <div className="loader-container" data-testid="loader">
       <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
     </div>
   )
@@ -186,16 +186,6 @@ class Jobs extends Component {
     // console.log(salary)
     this.setState({minimumSalary: salaryRangeId}, this.getJobs)
   }
-
-  //   changeEmployeeList = type => {
-  //     // console.log(type)
-  //     const {employeeType} = this.state
-  //     console.log(employeeType)
-  //     this.setState(
-  //       prev => ({employeeType: [...prev.employeeType, type]}),
-  //       this.getJobs,
-  //     )
-  //   }
 
   changeEmployeeList = type => {
     const {employeeTypeList} = this.state
@@ -256,10 +246,10 @@ class Jobs extends Component {
                   onChange={this.changeSearchInput}
                   onKeyDown={this.onEnterSearchInput}
                 />
-                {/* eslint-disable-next-line */}
+
                 <button
                   type="button"
-                  id="searchButton"
+                  data-testid="searchButton"
                   className="search-button-container-desktop"
                   onClick={this.getJobs}
                 >
